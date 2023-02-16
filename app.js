@@ -3,6 +3,7 @@ const app = express();
 
 app.set("view engine", "pug");
 app.set("views", "views");
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.render("index");
